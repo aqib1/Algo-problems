@@ -2,10 +2,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 public class MainClass {
 
 	public static boolean chainedArray(List<String> data) {
+		if(Objects.isNull(data) || data.isEmpty()) {
+			throw new IllegalArgumentException("Data is empty");
+		}
 		int size = data.size();
 		if (size == 1)
 			return true;
